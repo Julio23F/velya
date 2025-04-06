@@ -41,12 +41,12 @@ export default function Header() {
         </nav>
 
         <div className="hidden md:flex md:items-center md:gap-4">
-          <Button variant="outline" asChild>
+          {/* <Button variant="outline" asChild>
             <Link href="#contact">Se connecter</Link>
           </Button>
           <Button className="bg-primary text-white">
             <Link href="#contact">S'inscrire</Link>
-          </Button>
+          </Button> */}
         </div>
 
         {/* Mobile Navigation Button */}
