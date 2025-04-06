@@ -5,24 +5,25 @@ export default function WhySection() {
     {
       number: "01",
       title: "Solutions Digitales Sur-Mesure",
-      description: "Nous développons des solutions personnalisées pour répondre aux besoins spécifiques de votre entreprise, en intégrant des technologies innovantes dans les domaines du développement web, mobile et logiciel."
+      description: "Nous créons des solutions personnalisées pour répondre aux besoins spécifiques de votre entreprise avec des technologies innovantes."
     },
     {
       number: "02",
       title: "Accompagnement dans la Transformation Digitale",
-      description: "Nous facilitons la transition numérique de votre entreprise en mettant en place des solutions qui vous permettent de rester compétitif, agile et à la pointe de la technologie."
+      description: "Nous vous aidons à rester compétitif et agile grâce à des solutions de transformation numérique adaptées."
     },
     {
       number: "03",
       title: "Intégration de Technologies de Pointe",
-      description: "Nous intégrons des technologies modernes et évolutives pour connecter vos systèmes existants, qu'il s'agisse d'applications mobiles, de plateformes web ou d'outils internes, tout en assurant une parfaite fluidité des processus."
+      description: "Nous intégrons des technologies modernes pour connecter vos systèmes et fluidifier vos processus."
     },
     {
       number: "04",
       title: "Sécurité et Conformité Renforcées",
-      description: "Nos solutions sont conçues pour garantir un niveau de sécurité élevé, avec des mécanismes de protection des données et des transactions sensibles, en conformité avec les standards les plus stricts de l'industrie."
+      description: "Nos solutions garantissent une sécurité maximale et la conformité avec les normes strictes de l'industrie."
     }
   ];
+  
 
   return (
     <section id="why" className="py-20">
@@ -32,8 +33,9 @@ export default function WhySection() {
             Pourquoi choisir Velya-tech ? (04)
           </h4>
           <p className="mx-auto max-w-2xl text-center text-muted-foreground">
-            Chez Velya-tech, nous mettons à votre disposition des développeurs hautement qualifiés, spécialisés dans la création d'applications performantes et innovantes. Nous nous engageons à vous offrir des solutions de qualité, au-delà de vos attentes, pour accompagner la croissance de votre entreprise.
+            Velya-tech vous propose des développeurs qualifiés pour créer des applications performantes et innovantes, adaptées à vos besoins et à la croissance de votre entreprise.
           </p>
+
         </div>
 
 

@@ -4,7 +4,7 @@ export default function SolutionSection() {
   return (
     <section className="py-20">
       <div className="container px-4 md:px-8">
-        <div className="mb-12 text-center">
+        {/* <div className="mb-12 text-center">
           <p className="mb-2 text-sm font-medium text-primary">A propos</p>
           <h2 className="text-3xl font-bold md:text-4xl">
             L'innovation au service de vos projets
@@ -13,6 +13,12 @@ export default function SolutionSection() {
 
         <div className="mx-auto max-w-3xl text-center">
           <p className="mb-12 text-lg text-muted-foreground">
+            Nous concevons des solutions digitales sur mesure en plaçant la technologie et la créativité au cœur de notre ADN.
+          </p>
+        </div> */}
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6">L'innovation au service de vos projets</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
             Nous concevons des solutions digitales sur mesure en plaçant la technologie et la créativité au cœur de notre ADN.
           </p>
         </div>

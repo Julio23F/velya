@@ -97,11 +97,17 @@ export default function PricingSection() {
         </div> */}
 
         <div className="mt-20">
-          <div className="mb-8 text-center">
+          {/* <div className="mb-8 text-center">
             <h3 className="text-2xl font-bold md:text-3xl">
               TJM
             </h3>
             <p className="mx-auto mt-2 max-w-2xl text-muted-foreground">
+              Nous proposons un TJM compétitif, tout en garantissant l’expertise de développeurs expérimentés et un travail soigné, à la hauteur de vos exigences.
+            </p>
+          </div> */}
+          <div className="text-center mb-16">
+            <h1 className="text-5xl font-bold mb-6">Taux Journalier Moyen</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Nous proposons un TJM compétitif, tout en garantissant l’expertise de développeurs expérimentés et un travail soigné, à la hauteur de vos exigences.
             </p>
           </div>

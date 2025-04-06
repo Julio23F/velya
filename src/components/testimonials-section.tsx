@@ -46,6 +46,12 @@ export default function TestimonialsSection() {
             Consultez ici les membre de notre équipe et leur role:
           </p>
         </div>
+        {/* <div className="text-center mb-16">
+          <h1 className="text-5xl font-bold mb-6">Membre de notre notre<br /> équipe</h1>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Consultez ici les membre de notre équipe et leur role:
+          </p>
+        </div> */}
 
         <div className="mt-12">
           <Carousel className="w-full max-w-5xl mx-auto">
