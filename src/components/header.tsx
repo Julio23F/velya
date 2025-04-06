@@ -62,7 +62,7 @@ export default function Header() {
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
         <div className="fixed inset-0 top-16 z-50 bg-background md:hidden">
-          <nav className="container flex flex-col gap-4 p-4">
+          <nav className="container flex flex-col gap-4 p-4 bg-white border-b shadow-sm">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -74,12 +74,12 @@ export default function Header() {
               </Link>
             ))}
             <div className="mt-4 flex flex-col gap-4">
-              <Button variant="outline" className="w-full" asChild>
+              {/* <Button variant="outline" className="w-full" asChild>
                 <Link href="#contact" onClick={toggleMenu}>Se connecter</Link>
               </Button>
               <Button className="w-full bg-primary text-white" asChild>
                 <Link href="#contact" onClick={toggleMenu}>S'inscrire</Link>
-              </Button>
+              </Button> */}
             </div>
           </nav>
         </div>
