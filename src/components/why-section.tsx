@@ -29,12 +29,13 @@ export default function WhySection() {
       <div className="container px-4 md:px-8">
         <div className="mb-12">
           <h4 className="mb-4 text-center text-xl font-semibold md:text-2xl">
-            Pourquoi choisir Velya-tech? (04)
+            Pourquoi choisir Velya-tech ? (04)
           </h4>
           <p className="mx-auto max-w-2xl text-center text-muted-foreground">
-            Notre solution offre des avantages exceptionnels que les services financiers traditionnels ne peuvent égaler.
+            Chez Velya-tech, nous mettons à votre disposition des développeurs hautement qualifiés, spécialisés dans la création d'applications performantes et innovantes. Nous nous engageons à vous offrir des solutions de qualité, au-delà de vos attentes, pour accompagner la croissance de votre entreprise.
           </p>
         </div>
+
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:gap-12">
           {reasons.map((reason) => (
