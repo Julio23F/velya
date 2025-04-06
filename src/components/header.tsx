@@ -16,7 +16,7 @@ export default function Header() {
     { name: "Services", href: "#services" },
     { name: "Pourquoi?", href: "#why" },
     { name: "Tarifs", href: "#pricing" },
-    { name: "Témoignages", href: "#testimonials" },
+    { name: "Membres", href: "#testimonials" },
     { name: "Contact", href: "#contact" },
   ];
 
