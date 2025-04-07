@@ -28,25 +28,25 @@ export default function UsersSection() {
     {
       title: "Youstudy",
       description: "Application web développée pour connecter enseignants et élèves. Elle permet la création, le partage et la visualisation de cours en ligne, dans un environnement simple et intuitif.",
-      image: "/assets/images/realisations/youstudy.PNG",
+      image: "/assets/images/realisations/youstudy.jpeg",
       type: "web"
     },
     {
       title: "Site vitrine pour un client",
       description: "Développement d’un site vitrine professionnel incluant l'intégration de multiples moyens de paiement et une compatibilité avec diverses plateformes e-commerce.",
-      image: "/assets/images/realisations/portfolio.PNG",
+      image: "/assets/images/realisations/portfolio.jpeg",
       type: "web"
     },
-    {
-      title: "Myclasse",
-      description: "Plateforme tout-en-un dédiée à l’accompagnement scolaire, axée sur le conseil et l’orientation des élèves, avec des outils personnalisés pour guider leur parcours académique.",
-      image: "/assets/images/realisations/myclasse.PNG",
-      type: "web"
-    },
+    // {
+    //   title: "Myclasse",
+    //   description: "Plateforme tout-en-un dédiée à l’accompagnement scolaire, axée sur le conseil et l’orientation des élèves, avec des outils personnalisés pour guider leur parcours académique.",
+    //   image: "/assets/images/realisations/myclasse.PNG",
+    //   type: "web"
+    // },
     {
       title: "M Sos",
       description: "Application de mise en relation, pensée pour favoriser des rencontres authentiques grâce à un système de matching intelligent.",
-      image: "/assets/images/realisations/msos.PNG",
+      image: "/assets/images/realisations/msos.jpeg",
       type: "web"
     },
   ];
