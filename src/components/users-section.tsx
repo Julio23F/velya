@@ -1,11 +1,10 @@
 'use client';
 
-import Image from 'next/image';
-import { Card, CardContent } from './ui/card';
 import { useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ArrowRight, Lock } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,48 +14,61 @@ export default function UsersSection() {
   const titleRef = useRef<HTMLHeadingElement>(null);
   const filterRef = useRef<HTMLDivElement>(null);
 
-  const userTypes = [
+  const projects = [
     {
+      id: 1,
       title: "MuseVibes",
       description: "Application mobile de streaming musical...",
       image: "/assets/images/realisations/musevibes.jpeg",
-      type: "mobile"
+      type: "mobile",
+      gradient: "from-blue-900 to-blue-700"
     },
     {
+      id: 2,
       title: "Youstudy",
       description: "Application web pour connecter enseignants et élèves...",
       image: "/assets/images/realisations/youstudy.jpeg",
-      type: "web"
+      type: "web",
+      gradient: "from-purple-900 to-purple-700"
     },
     {
+      id: 3,
       title: "Domestik",
       description: "Application mobile collaborative de gestion des tâches...",
       image: "/assets/images/realisations/domestik.jpeg",
-      type: "mobile"
+      type: "mobile",
+      gradient: "from-blue-900 to-blue-700"
     },
     {
+      id: 4,
       title: "Site vitrine pour un client",
       description: "Site vitrine professionnel avec paiement intégré...",
       image: "/assets/images/realisations/portfolio.jpeg",
-      type: "web"
+      type: "web",
+      gradient: "from-purple-900 to-purple-700"
     },
     {
+      id: 5,
       title: "Agritech",
       description: "Solution mobile connectée pour la qualité des produits agricoles...",
       image: "/assets/images/realisations/agritech.jpeg",
-      type: "mobile"
+      type: "mobile",
+      gradient: "from-blue-900 to-blue-700"
     },
     {
+      id: 6,
       title: "M Sos",
       description: "Application de mise en relation avec matching intelligent...",
       image: "/assets/images/realisations/msos.jpeg",
-      type: "web"
+      type: "web",
+      gradient: "from-purple-900 to-purple-700"
     },
   ];
 
+
   const filteredUserTypes = selectedType === 'all'
-    ? userTypes
-    : userTypes.filter((user) => user.type === selectedType);
+    ? projects
+    : projects.filter((user) => user.type === selectedType);
 
     useEffect(() => {
       if (!sectionRef.current || !titleRef.current || !filterRef.current) return;
@@ -122,35 +134,47 @@ export default function UsersSection() {
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          <AnimatePresence>
-            {filteredUserTypes.map((user) => (
-              <motion.div
-                key={user.title}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -30 }}
-                transition={{ duration: 0.5 }}
-                layout // Animation de réorganisation fluide
-              >
-                <Card className="overflow-hidden border-0 shadow-sm">
-                  <div className="aspect-[4/3] w-full overflow-hidden">
-                    <Image
-                      src={user.image}
-                      alt={user.title}
-                      width={400}
-                      height={300}
-                      className="h-full w-full object-cover transition-transform hover:scale-105"
+        <AnimatePresence>
+          {filteredUserTypes.map((project) => (
+            <motion.div
+              key={project.title}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -30 }}
+              transition={{ duration: 0.5 }}
+              layout
+            >
+              <div className="flex flex-col lg:flex-row items-start gap-4 bg-[#fff] rounded-md">
+                <div className="w-full lg:w-1/2 space-y-3 p-5">
+                  <h2 className="text-xl font-semibold text-gray-800 leading-tight">
+                    {project.title}
+                  </h2>
+                  <p className="text-gray-600 text-sm">
+                    {project.description}
+                  </p>
+                  <button className="inline-flex items-center text-purple-600 hover:text-purple-700 font-medium " style={{fontSize: "0.8em"}}>
+                    VOIR L'APPLICATION
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </button>
+                </div>
+
+                {/* <div className={`w-full lg:w-1/2 relative rounded-lg overflow-hidden bg-gradient-to-br ${project.gradient} p-2`}> */}
+                <div className={`w-full lg:w-1/2 relative rounded-lg overflow-hidden bg-gradient-to-br p-2`}>
+                  {/* <div className="relative h-[200px]"> */}
+                  <div className="h-[200px] w-full overflow-hidden rounded-md">
+                    <img 
+                      src={project.image}
+                      alt={project.title}
+                      className="h-full w-full object-cover transition-transform duration-300 ease-in-out hover:scale-105"
                     />
                   </div>
-                  <CardContent className="p-6">
-                    <h6 className="mb-2 text-lg font-semibold">{user.title}</h6>
-                    <p className="text-sm text-muted-foreground">{user.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </div>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </AnimatePresence>
+      </div>
+
       </div>
     </section>
   );
