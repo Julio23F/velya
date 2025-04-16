@@ -8,7 +8,7 @@ import { ArrowRight, Lock } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function UsersSection() {
+export default function ProjectsSection() {
   const [selectedType, setSelectedType] = useState('all');
   const sectionRef = useRef<HTMLElement>(null);
   const titleRef = useRef<HTMLHeadingElement>(null);

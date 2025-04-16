@@ -7,7 +7,7 @@ import PricingSection from "@/components/pricing-section";
 import ServicesSection from "@/components/services-section";
 import SolutionSection from "@/components/solution-section";
 import TestimonialsSection from "@/components/testimonials-section";
-import UsersSection from "@/components/users-section";
+import ProjectsSection from "@/components/projects-section";
 import WhySection from "@/components/why-section";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
         <SolutionSection />
         <ServicesSection />
         <WhySection />
-        <UsersSection />
+        <ProjectsSection />
         <PricingSection />
         <TestimonialsSection />
         <FaqSection />
