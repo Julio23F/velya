@@ -1,7 +1,7 @@
 import React from 'react';
 import { Code2, Database, FileCode2, Layers, Server } from 'lucide-react';
 
-function PricingSection() {
+function TechnosSection() {
   const technologies = [
     {
       name: 'React',
@@ -119,7 +119,7 @@ function PricingSection() {
             Les Langages, Frameworks ou Solutions que nous utilisons au quotidien
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center" style={{marginTop: "150px"}}>
+          <div className="grid grid-cols-2 md:grid-cols-5 items-center" style={{marginTop: "150px", gap: "50px", }}>
             {technologies.map((tech, key) => (
               <div key={key} className="h-full flex  items-center justify-center">
                 <img 
@@ -139,4 +139,4 @@ function PricingSection() {
   );
 }
 
-export default PricingSection;
+export default TechnosSection;

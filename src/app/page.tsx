@@ -3,7 +3,7 @@ import FaqSection from "@/components/faq-section";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import HeroSection from "@/components/hero-section";
-import PricingSection from "@/components/pricing-section";
+import TechnosSection from "@/components/techonos-section";
 import ServicesSection from "@/components/services-section";
 import SolutionSection from "@/components/solution-section";
 import TestimonialsSection from "@/components/testimonials-section";
@@ -20,7 +20,7 @@ export default function Home() {
         <ServicesSection />
         <WhySection />
         <ProjectsSection />
-        <PricingSection />
+        <TechnosSection />
         <TestimonialsSection />
         <FaqSection />
         <ContactSection />
