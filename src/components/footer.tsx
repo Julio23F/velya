@@ -28,7 +28,7 @@ export default function Footer() {
               {[
                 { name: "Acceuil", href: "#hero" },
                 { name: "Services", href: "#services" },
-                { name: "Pourquoi?", href: "#why" },
+                { name: "Pourquoi", href: "#why" },
                 { name: "Tarifs", href: "#pricing" },
                 { name: "Témoignages", href: "#testimonials" },
               ].map((link) => (
