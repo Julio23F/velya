@@ -59,6 +59,14 @@ export default function SolutionSection() {
     <section className="py-20" ref={sectionRef}>
       <div className="container px-4 md:px-8">
         <div className="text-center mb-16">
+          <div className="absolute top-50 right-0 grid grid-cols-4 gap-4 p-4">
+            {[...Array(28)].map((_, i) => (
+              <div key={i} className="w-1 h-1 bg-[#E0363A] rounded-full" />
+            ))}
+            {/* {[...Array(18)].map((_, i) => (
+              <div key={i} className="w-1 h-1 bg-[#E0363A] rounded-full" />
+            ))} */}
+          </div>
           <h1 className="solution-title text-5xl font-bold mb-6">
             L'innovation au service de vos projets
           </h1>
