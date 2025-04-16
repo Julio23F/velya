@@ -9,6 +9,7 @@ import SolutionSection from "@/components/solution-section";
 import TestimonialsSection from "@/components/testimonials-section";
 import ProjectsSection from "@/components/projects-section";
 import WhySection from "@/components/why-section";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function Home() {
   return (
