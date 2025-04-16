@@ -1,6 +1,15 @@
+'use client';
+
+import React, { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Card, CardContent, CardHeader } from "./ui/card";
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function WhySection() {
+  const sectionRef = useRef<HTMLDivElement>(null);
+
   const reasons = [
     {
       number: "01",
@@ -23,10 +32,25 @@ export default function WhySection() {
       description: "Nos solutions garantissent une sécurité maximale et la conformité avec les normes strictes de l'industrie."
     }
   ];
-  
+
+  useEffect(() => {
+    const elements = gsap.utils.toArray('.reason-item');
+
+    gsap.from(elements, {
+      y: 50,
+      opacity: 0,
+      duration: 1.8,
+      stagger: 0.2,
+      ease: 'power3.out',
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+      },
+    });
+  }, []);
 
   return (
-    <section id="why" className="py-20">
+    <section id="why" className="py-20" ref={sectionRef}>
       <div className="container px-4 md:px-8">
         <div className="mb-12">
           <h4 className="mb-4 text-center text-xl font-semibold md:text-2xl">
@@ -35,13 +59,11 @@ export default function WhySection() {
           <p className="mx-auto max-w-2xl text-center text-muted-foreground">
             Velya-tech vous propose des développeurs qualifiés pour créer des applications performantes et innovantes, adaptées à vos besoins et à la croissance de votre entreprise.
           </p>
-
         </div>
-
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:gap-12">
           {reasons.map((reason) => (
-            <div key={reason.number} className="space-y-2">
+            <div key={reason.number} className="space-y-2 reason-item">
               <div className="flex items-center gap-2">
                 <span className="font-medium text-primary">{reason.number}</span>
                 <h5 className="text-lg font-semibold md:text-xl">{reason.title}</h5>
