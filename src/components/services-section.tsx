@@ -1,7 +1,12 @@
+'use client';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "./ui/card";
 import { CircleDollarSign, Send, PlusCircle, ArrowLeftRight, Wallet } from "lucide-react";
 import { Monitor, Smartphone, Code, Palette } from 'lucide-react';
-import React from 'react';
+import React, { useEffect } from 'react';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function ExpertiseCard({ 
   icon: Icon, 
@@ -25,35 +30,52 @@ function ExpertiseCard({
 
 
 export default function ServicesSection() {
+  useEffect(() => {
+    const cards = gsap.utils.toArray<HTMLElement>(".expertise-card");
+
+    gsap.from(cards, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: cards[0],
+        start: "top 80%",
+      },
+    });
+  }, []);
 
   const services = [
     {
       icon: Monitor,
       title: "WEB",
-      description: "Conception et développement de sites web modernes, réactifs et performants, adaptés à vos besoins.",
+      description:
+        "Conception et développement de sites web modernes, réactifs et performants, adaptés à vos besoins.",
       bgColor: "bg-teal-500",
     },
     {
       icon: Smartphone,
       title: "MOBILE",
-      description: "Développement d'applications mobiles sur mesure pour Android et iOS, offrant une expérience utilisateur fluide et intuitive.",
+      description:
+        "Développement d'applications mobiles sur mesure pour Android et iOS, offrant une expérience utilisateur fluide et intuitive.",
       bgColor: "bg-black",
     },
     {
       icon: Code,
       title: "LOGICIEL",
-      description: "Création de logiciels personnalisés et de solutions sur mesure pour optimiser et automatiser vos processus métier.",
+      description:
+        "Création de logiciels personnalisés et de solutions sur mesure pour optimiser et automatiser vos processus métier.",
       bgColor: "bg-teal-500",
     },
     {
       icon: Palette,
       title: "WEB MARKETING & GRAPHISME",
-      description: "Création d’identités visuelles percutantes, conception graphique et stratégies marketing digital pour valoriser votre marque et atteindre vos objectifs.",
+      description:
+        "Création d’identités visuelles percutantes, conception graphique et stratégies marketing digital pour valoriser votre marque et atteindre vos objectifs.",
       bgColor: "bg-gray-800",
-    }
+    },
   ];
-
-  
 
   return (
     <section id="services" className="bg-muted my-20">
@@ -67,18 +89,20 @@ export default function ServicesSection() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <ExpertiseCard
-              key={index}
-              icon={service.icon}
-              title={service.title}
-              description={service.description}
-              bgColor={service.bgColor}
-            />
-          ))}
+            {services.map((service, index) => (
+              <div className="expertise-card" key={index}>
+                <ExpertiseCard
+                  icon={service.icon}
+                  title={service.title}
+                  description={service.description}
+                  bgColor={service.bgColor}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
 }
+
