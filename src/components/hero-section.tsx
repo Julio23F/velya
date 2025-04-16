@@ -52,7 +52,7 @@ export default function HeroSection() {
           <div className="flex flex-col items-start justify-center">
             <h1
               ref={titleRef}
-              className="mb-6 max-w-3xl text-4xl font-bold leading-tight tracking-tight"
+              className="mt-[100px] sm:mt-0 mb-6 max-w-3xl text-4xl font-bold leading-tight tracking-tight"
             >
               Vous avez un projet tech,{" "}
               <span className="text-primary">nous sommes là</span>.
