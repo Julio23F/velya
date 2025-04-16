@@ -14,6 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 export default function Home() {
   return (
     <div className="flex min-h-screen flex-col">
+      <Analytics/>
       <Header />
       <main className="flex-1">
         <HeroSection />

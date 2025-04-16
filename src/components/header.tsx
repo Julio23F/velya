@@ -22,8 +22,17 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between px-4 md:px-8">
-        <Link href="/#hero" className="flex items-center gap-2 font-bold">
-          <span className="text-xl font-bold">Velya-tech</span>
+        <Link href="/#hero" className="flex items-center gap-2 font-bold" 
+          style={{ marginLeft: "-90px"}}
+        >
+          {/* <span className="text-xl font-bold">Velya-tech</span> */}
+          <img 
+            src="/assets/images/logo1.png"
+            alt="logo"
+            // className="h-[65px] w-[300px] object-cover transition-transform duration-300 ease-in-out hover:scale-105"
+            className="h-[65px] w-[270px] object-cover "
+            // style={{marginLeft: "-40px"}}
+          />
         </Link>
 
         {/* Desktop Navigation */}
