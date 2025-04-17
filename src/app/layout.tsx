@@ -5,6 +5,9 @@ import { Inter } from "next/font/google";
 export const metadata: Metadata = {
   title: "Velya Technology - Expert en développement informatique",
   description: "Expert en développement informatique",
+  icons: {
+    icon: "/assets/images/icon.png",
+  },
 };
 
 export default function RootLayout({
